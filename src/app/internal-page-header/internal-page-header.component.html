@@ -1,23 +1,40 @@
-<header class="header" *ngIf = "variant.text">
-  <h1>1</h1>
+<!--<header class="header" *ngIf = "variant.textoverimage">
   <h1>{{headerData.content[0].header1}}</h1>
   <p>{{headerData.content[0].content1}}</p>
 </header>
 
-<header class="header" *ngIf = "variant.textoverimage">
-    <h1>2</h1>
+<header class="header variant2" *ngIf ="variant.halfwidthandimage"  >
+  <img class="image-desktop" alt={{headerData.content[0].image.alt}} src={{headerData.content[0].image.src1}}>
+  <img class="image-mobile" alt={{headerData.content[0].image.alt}} src={{headerData.content[0].image.src2}}>
+  <h1>{{headerData.content[0].header1}}</h1>
+  <p>{{headerData.content[0].content1}}</p>
+  
+</header>
+
+<header class="header variant3" *ngIf = "variant.headerwithblackovrlay">
+  <div class="image-wrapper">
+       <img class="image-desktop" alt={{headerData.content[0].image.alt}} src={{headerData.content[0].image.src1}}>
+  </div>
+  <img class="image-mobile" alt={{headerData.content[0].image.alt}} src={{headerData.content[0].image.src2}}>
   <h1>{{headerData.content[0].header1}}</h1>
   <p>{{headerData.content[0].content1}}</p>
 </header>
 
-<header class="header" *ngIf = "variant.halfwidthandimage">
-    <h1>3</h1>
+<header class="header variant2 variant4" *ngIf = "variant.text">
+  <div class="overlay"></div>
+  <img class="image-desktop" alt={{headerData.content[0].image.alt}} src={{headerData.content[0].image.src1}}>
+  <img class="image-mobile" alt={{headerData.content[0].image.alt}} src={{headerData.content[0].image.src2}}>
   <h1>{{headerData.content[0].header1}}</h1>
   <p>{{headerData.content[0].content1}}</p>
-</header>
+</header>-->
 
-<header class="header" *ngIf = "variant.headerwithblackovrlay">
-    <h1>4</h1>
+<header class="header">
+   <div class="overlay" *ngIf = "variant.headerwithblackovrlay"></div>
+   <div class="image-wrapper" *ngIf= "variant.halfwidthandimage">
+       <img class="image-desktop" alt={{headerData.content[0].image.alt}} src={{headerData.content[0].image.src1}}>
+  </div>
+  <img class="image-desktop" alt={{headerData.content[0].image.alt}} src={{headerData.content[0].image.src1}} *ngIf = "variant.textoverimage || variant.headerwithblackovrlay">
+  <img class="image-mobile" alt={{headerData.content[0].image.alt}} src={{headerData.content[0].image.src2}}>
   <h1>{{headerData.content[0].header1}}</h1>
   <p>{{headerData.content[0].content1}}</p>
 </header>

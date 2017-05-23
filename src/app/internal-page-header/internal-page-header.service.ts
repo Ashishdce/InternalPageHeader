@@ -7,7 +7,7 @@ import { InternalPageHeaderInterface } from './internal-page-header.interface';
 
 export class InternalPageHeaderService{
 
-    url: string = 'https://api.myjson.com/bins/qcibt';
+    url: string = '/assets/internal-page-header.json';
 
     private headerData$: Observable<any>;
 

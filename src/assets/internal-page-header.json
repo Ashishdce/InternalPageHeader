@@ -2,7 +2,7 @@
   "module": {
     "typeID": "101",
     "typeName": "Internal Page Header",
-    "variantID": "3",
+    "variantID": "2",
     "variantName": "Intenal Page Header with text only"
   },
   "content": [
@@ -10,9 +10,9 @@
       "header1": "H1rem ipsum dolor sit amet, consectetur",
       "content1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusunnd tempor incidentunt ut labor.",
       "image": {
-        "src1": "[src] url",
-        "src2": "[src] url (*phones)",
-        "alt": "<alt copy>"
+        "src1": "../../assets/images/internal_page_header.jpg",
+        "src2": "../../assets/images/internal_page_header_mobile.jpg",
+        "alt": "Header Image "
       }
     }
   ]

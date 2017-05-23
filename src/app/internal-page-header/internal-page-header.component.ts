@@ -1,16 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { InternalPageHeaderService } from './internal-page-header.service';
 import { InternalPageHeaderInterface } from './internal-page-header.interface';
+import { InternalPageHeaderEnum } from './internal-page-header-enum.enum';
 
 @Component({
   selector: 'app-internal-page-header',
   templateUrl: './internal-page-header.component.html',
-  styleUrls: ['./internal-page-header.component.css']
+  styleUrls: ['./internal-page-header.component.scss']
 })
-export class InternalPageHeaderComponent implements OnInit {
+export class InternalPageHeaderComponent{
 
-InternalPageHeader:any; 
- 
  variant= {
       text :false ,
       textoverimage : false,
@@ -20,29 +19,14 @@ InternalPageHeader:any; 
   
   private headerData: InternalPageHeaderInterface;
 
-  constructor(private internalPageHeaderService: InternalPageHeaderService) { 
-    enum InternalPageHeader {
-      text=1 ,
-      textoverimage = 2,
-      halfwidthandimage = 3,
-      headerwithblackovrlay = 4
-    };
-
+  constructor( private internalPageHeaderService: InternalPageHeaderService) { 
+    
     this.internalPageHeaderService.getData()
     .subscribe(data =>
         { 
           this.headerData = data.json(); 
-         this.variant[InternalPageHeader[this.headerData.module.variantID]]=true;
+         this.variant[InternalPageHeaderEnum[this.headerData.module.variantID]]=true;
         }
-      );
-    
-
-
-    
+      );    
   }
-
-  ngOnInit() {
-     
-  }
-
 }
