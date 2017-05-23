@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Http, Response} from '@angular/http';
 import { Observable } from 'rxjs';
-import { InternalPageHeaderInterface } from './internal-page-header.interface';
+import { Fragment1Interface } from './fragment-1.interface';
 
 @Injectable()
 
-export class InternalPageHeaderService{
+export class Fragment1Service{
 
-    url: string = '/assets/internal-page-header.json';
+    url: string = '/assets/fragment-1.json';
 
     private headerData$: Observable<any>;
 

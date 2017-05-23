@@ -29,11 +29,12 @@
 </header>-->
 
 <header class="header">
-   <div class="overlay" *ngIf = "variant.headerwithblackovrlay"></div>
-   <div class="image-wrapper" *ngIf= "variant.halfwidthandimage">
+   
+   <div class="image-wrapper" *ngIf= "variant == enum.halfwidthandimage ">
        <img class="image-desktop" alt={{headerData.content[0].image.alt}} src={{headerData.content[0].image.src1}}>
   </div>
-  <img class="image-desktop" alt={{headerData.content[0].image.alt}} src={{headerData.content[0].image.src1}} *ngIf = "variant.textoverimage || variant.headerwithblackovrlay">
+  <div class="overlay" *ngIf = "variant == enum.headerwithblackoverlay"></div>
+  <img class="image-desktop" alt={{headerData.content[0].image.alt}} src={{headerData.content[0].image.src1}} *ngIf = "variant == enum.textoverimage || variant == enum.headerwithblackoverlay">
   <img class="image-mobile" alt={{headerData.content[0].image.alt}} src={{headerData.content[0].image.src2}}>
   <h1>{{headerData.content[0].header1}}</h1>
   <p>{{headerData.content[0].content1}}</p>

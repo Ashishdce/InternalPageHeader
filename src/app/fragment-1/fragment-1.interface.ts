@@ -1,4 +1,4 @@
-export interface InternalPageHeaderInterface{
+export interface Fragment1Interface{
     module : Module, // can we keep it as any?
     content: Array<Contents>
 }

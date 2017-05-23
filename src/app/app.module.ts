@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { InternalPageHeaderModule } from './internal-page-header/internal-page-header.module';
+import { Fragment1Module } from './fragment-1/fragment-1.module';
 
 import { AppComponent } from './app.component';
+
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    InternalPageHeaderModule
+    Fragment1Module
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { InternalPageHeaderComponent } from './internal-page-header/internal-page-header.component';
+import { Fragment1Component } from './fragment-1/fragment-1.component';
 
 @Component({
   selector: 'app-root',
